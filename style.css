@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+header{
+    height: 100vh;
+    width: 100%;
+    background-color:#fefe5e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 1;
+
+}
+
+main{
+    height: 100vh;
+    background-color:lightgray;
+    margin-top: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+header img{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 3%;
+    height: 70vh;
+}
+header nav{
+    position: absolute;
+    right: 10%;
+    top: 2%;
+    font-size: 4rem;
+
+}
+header hgroup{
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    z-index: 2;
+}
+header h1{
+    font-size: 4rem;
+    position: absolute;
+    bottom: 100%;
+}
+header h3{
+    font-size: 2rem;
+    padding-top: 10px;
+}
+#arrow{
+    width: 56px;
+    height: 56px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 0px -15px 0 black, 0px -30px 0 black;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+#arrow:hover{
+    text-shadow: 0px -15px 0 white, 0px -30px 0 white;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.fa-angle-down{
+    animation: arrow 1.4s infinite linear;
+}
+
+/* po zwinieciu strony, sekcja main */
+
+main img{
+    position: absolute;
+    bottom: 55%;
+    right: 0;
+    left: 10%;
+    height: 40vh;
+    border-radius: 40%;
+}
+main h1{
+    position: absolute;
+    font-size:30px;
+    top:50%;
+    left:35%;
+}
+main h3{
+    position: absolute;
+    top: 60%;
+    font-size: 18px;
+    margin-left: 15px;
+}
+main p{
+    position: absolute;
+    top: 70%;
+    font-size: 18px;
+    left:20%;
+}
+main button{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-size: 20px;
+    font-weight: 600;
+    padding-block: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+@media (orientation:portrait){
+    h3 span::after{
+        content: '\A';
+        white-space: pre;
+    }
+}
+@media (orientation:landscape){
+    header img{
+        left: 60%;
+        height: 90vh;
+   }
+}
+@media (orientation:landscape){
+    header hgroup{
+        top: 30%;
+    }
+}
+
+@keyframes arrow{
+    0% {transform: translateY(-80px)
+    }
+    50% {transform: translateY(0px)
+    }
+    100% {transform: translateY(80px)
+    }
+}   
